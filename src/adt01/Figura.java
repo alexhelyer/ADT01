@@ -21,8 +21,7 @@ public class Figura {
     }
     
     public void pintarTrianguloE(char caracter, int altura) {
-        //int mitad = altura
-        //int ajuste = (altura*2)-1;
+        
         for(int i=0; i<altura; i++) {           
             for(int j=0; j<altura-i; j++)
                 System.out.print(" ");
@@ -54,14 +53,12 @@ public class Figura {
     }
     
     public void pintarRombo(char caracter, int altura) {
-        //int mitad = altura
         int ajuste = (altura*2)-1;
         int buffer = -1;
+        
         for(int i=0; i<ajuste; i++) {
-            if(i>altura-1)
-                buffer--;
-            else
-                buffer++;
+            
+            buffer = (i<altura)?++buffer:--buffer;
             
             for(int j=0; j<altura-buffer; j++)
                 System.out.print(" ");
@@ -75,51 +72,38 @@ public class Figura {
     }
     
     public void pintarHexagono(char caracter, int altura) {
-        //int mitad = altura
         int ajuste = (altura*2)-1;
+        
         int buffer = -1;
-        for(int i=0; i<ajuste; i++) {
-            if(i>altura-1)
-                buffer--;
-            else
-                buffer++;
+        
+        for (int i=0; i<ajuste; i++) {
             
-            if (buffer>(altura/2)) {
+            buffer = (i<altura)?++buffer:--buffer;
+            
                 for(int j=0; j<altura-buffer; j++)
                     System.out.print(" ");
-                for(int j=0; j<=2*buffer; j++)
+                for(int j=0; j<=ajuste + 2*buffer; j++)
                     System.out.print(caracter);
                 for(int j=0; j<altura-buffer; j++)
                     System.out.print(" ");
                 
                 System.out.print("\n");
-            }
         }
     }
     
     public void pintarTrapecio(char caracter, int altura) {
-        //int mitad = altura
         int ajuste = (altura*2)-1;
-        int buffer = -1;
-        for(int i=0; i<altura; i++) {
-            if(i>altura-1)
-                buffer--;
-            else
-                buffer++;
+        
+        for (int i=0; i<altura; i++) {
             
-            if (buffer>(altura/2)) {
-                for(int j=0; j<altura-buffer; j++)
+                for(int j=0; j<altura-i; j++)
                     System.out.print(" ");
-                for(int j=0; j<=2*buffer; j++)
+                for(int j=0; j<=ajuste + 2*i; j++)
                     System.out.print(caracter);
-                for(int j=0; j<altura-buffer; j++)
+                for(int j=0; j<altura-i; j++)
                     System.out.print(" ");
                 
                 System.out.print("\n");
-            }
-
-            
-            
         }
     }
     
@@ -130,7 +114,6 @@ public class Figura {
         int buffer = -1;
         
         for (int i=0; i<altura; i++) {
-            
             buffer++;
                 for(int j=0; j<altura-buffer; j++)
                     System.out.print(" ");
@@ -155,7 +138,6 @@ public class Figura {
         }
         
         for (int i=0; i<altura; i++) {
-            
             buffer--;
                 for(int j=0; j<altura-buffer; j++)
                     System.out.print(" ");

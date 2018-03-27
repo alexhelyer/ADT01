@@ -27,15 +27,15 @@ public class ADT01 {
         
         mifigura.pintarCuadrado('*', 10);
         
-        mifigura.pintarRectangulo('0', 10,5);
+        mifigura.pintarRectangulo('0', 15,10);
         
-        mifigura.pintarRombo('*',10);
+        mifigura.pintarRombo('R',7);
         
-        mifigura.pintarHexagono('0', 10);
+        mifigura.pintarTrapecio('A',7);
         
-        mifigura.pintarTrapecio('*',10);
+        mifigura.pintarHexagono('R', 5);
         
-        mifigura.pintarOctagono('0',4);
+        mifigura.pintarOctagono('O',5);
 
     }
     
