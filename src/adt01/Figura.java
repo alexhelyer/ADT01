@@ -149,9 +149,6 @@ public class Figura {
                 System.out.print("\n");
         }
         
-        
-        
     }
-    
     
 }

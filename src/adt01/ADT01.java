@@ -15,9 +15,6 @@ public class ADT01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        //System.out.println("Hola Mundo");
         
         Figura mifigura = new Figura();
         
@@ -36,7 +33,6 @@ public class ADT01 {
         mifigura.pintarHexagono('R', 5);
         
         mifigura.pintarOctagono('O',5);
-
+        
     }
-    
 }
